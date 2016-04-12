@@ -1,0 +1,12 @@
+
+.login {
+	width: 30%;
+	background-color: rgba(240, 240, 240, 0.7);
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+}
+
+#login {
+	margin-left: 18%;
+}
+

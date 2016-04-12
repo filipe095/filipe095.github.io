@@ -1,0 +1,103 @@
+// ------ Vars ------
+// Colors
+@orange: #f75;
+@yellow: #fc5;
+@green: #8c5;
+@blue: #59f;
+
+@white: #fff;
+@gray: #ddd;
+@black: #334;
+
+// Sizes
+@baseFont: 14px;
+@baseLine: @baseFont * 1.5;
+
+// Media Queries
+
+// Reset
+.container, .container-fluid{ padding: 0; }
+
+// Classes / Snippets
+
+html, body{
+	background: @black;
+	margin: 0; padding: 0;
+	min-height: 100%;
+	font-size: @baseFont;
+	line-height: @baseLine;
+}
+
+header{
+	// background-image: url(https://mmtstock.s3.amazonaws.com/photos/PB150701.jpg);
+	// background-image: url(../img/back5.jpg);
+	// background-image: url(../img/back4.jpg);
+	// background-image: url(../img/back3.jpg);
+	// background-image: url(../img/back2.jpg);
+	background-image: url(../img/back1.jpg);
+	background-position: 100% 0%;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+	.textOverlay{
+		color: @black;
+		font-weight: 300;
+		text-align: right;
+		position: absolute;
+		bottom: @baseLine * 12; right: @baseLine * 8;
+		opacity: .9;
+		> .welcomeTo{
+			font-family: 'Lato';
+			font-size: @baseFont * 4;
+			line-height: @baseFont * 4;
+			padding-right: 8px;
+		}
+		> .pms{
+			font-family: 'Roboto Slab';
+			font-size: @baseFont * 8;
+			line-height: @baseFont * 8;
+			padding-right: 4px;
+		}
+	}
+	.timeOverlay{
+		font-family: 'Roboto Slab', monospace;
+		font-size: @baseFont * 12;
+		line-height: @baseFont * 12;
+		font-weight: 300;
+		position: absolute;
+		&.black{ color: fade(@black, 70%); }
+		&.white{ color: fade(@white, 90%); }
+		&.top{ top: @baseLine * 2; }
+		&.bottom{ bottom: @baseLine * 4; }
+		&.left{ left: @baseLine * 4; }
+		&.right{ right: @baseLine * 8; }
+	}
+	nav{
+		background: fade(@white, 70%);
+		color: @black;
+		font-size: @baseFont * 1.2;
+		line-height: @baseLine * 6;
+		height: @baseLine * 6;
+		position: relative;
+		text-align: center;
+		.fa{
+			line-height: @baseLine * 2;
+			height: @baseLine * 2; width: @baseLine * 2;
+			margin: 0 @baseLine / 4;
+			vertical-align: baseline;
+		}
+		.fa.round{
+			background: fade(@white, 80%);
+			color: @black;
+			line-height: @baseLine * 2.5;
+			height: @baseLine * 2.5; width: @baseLine * 2.5;
+			border-radius: @baseLine * 4;
+			cursor: pointer;
+		}
+		.fa.blue{ background: @blue; color: @white; cursor: pointer;}
+		.fa.green{ background: @green; color: @white; cursor: pointer;}
+		.fa.orange{ background: @orange; color: @white; cursor: pointer;}
+		.fa.yellow{ background: @yellow; color: @white; cursor: pointer;}
+		.fa.black{ background: @black; color: @white; cursor: pointer;}
+	}
+}
